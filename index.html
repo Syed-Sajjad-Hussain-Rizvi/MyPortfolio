@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Freelancer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script>
+    // Enable dark mode using Tailwind config
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  </head>
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-500">
+
+    <!-- Fixed Navbar -->
+    <nav class="w-full fixed top-0 z-50 shadow bg-white dark:bg-gray-800">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1
+          class="text-xl font-bold text-indigo-600 dark:text-indigo-300">Rizvi</h1>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#" class="hover:text-indigo-600">Home</a></li>
+          <li><a href="#about" class="hover:text-indigo-600">About</a></li>
+          <li><a href="#projects"
+              class="hover:text-indigo-600">Projects</a></li>
+          <li><a href="#contact" class="hover:text-indigo-600">Contact</a></li>
+        </ul>
+        <!-- Dark Toggle -->
+        <button id="darkToggle"
+          class="text-2xl ml-4 focus:outline-none">🌙</button>
+      </div>
+    </nav>
+
+    <!-- Spacer for Fixed Navbar -->
+    <div class="h-20"></div>
+
+    <!-- Hero Section -->
+    <section
+      class="max-w-7xl mx-auto px-4 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
+      <!-- Left Content -->
+      <div class="flex-1" data-aos="fade-right">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span
+            class="text-indigo-600 dark:text-indigo-400">Syed Sajjad
+            Hussain</span></h2>
+        <p class="mb-6 text-lg">I’m a passionate Frontend Developer & Web
+          Designer with 4+ years of experience in building responsive, modern
+          websites using HTML, CSS, JavaScript, Bootstrap, React.js, and
+          WordPress (Elementor & WooCommerce). I craft visually stunning
+          interfaces that not only look great but also deliver a seamless user
+          experience.</p>
+        <button
+          class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded shadow">
+          Hire Me
+        </button>
+      </div>
+
+      <!-- Right Image -->
+      <div class="flex-1" data-aos="fade-left">
+        <img id="hero-img" src="assets/img/sajjad.jpg"
+          alt="Hero Image" class="w-full max-w-md mx-auto shadow-xl rounded-lg">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-7xl mx-auto px-4 py-20">
+      <div class="text-center mb-12" data-aos="fade-down">
+        <h2
+          class="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">About
+          Me</h2>
+        <p class="text-black-600 dark:text-black-300 max-w-2xl mx-auto">
+         Frontend developer passionate about clean code and smooth interactions.
+        </p>
+      </div>
+
+      <div class="md:flex items-center gap-10" data-aos="fade-up">
+        <!-- Image -->
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img src="assets/img/sajjad.jpg" alt="About Me"
+            class="rounded-lg shadow-lg mx-auto w-80 h-80 object-cover">
+        </div>
+
+        <!-- Text Content -->
+        <div class="md:w-1/2 space-y-4 text-black-700 dark:text-black-300">
+          <h3 class="text-2xl font-semibold">Digital Experience Developer</h3>
+          <p>
+            With 4 years in web design & development, I specialize in:
+             Responsive layouts
+             WordPress & Elementor builds
+             Modern UI with React & JS
+            I make websites that not only look great  but perform better
+          </p>
+          <p>
+            I build responsive layouts, animations, and seamless UI that make
+            websites come alive. Let’s collaborate and bring your vision to
+            life.
+          </p>
+          <button
+            class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded shadow">
+            Download CV
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="about" class="py-20 px-6 md:px-12" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-12">
+
+        
+        <div>
+          <h2
+            class="text-4xl font-bold mb-4 text-gray-800 dark:text-white">About
+            Me</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            I'm a passionate web developer and designer with experience in HTML,
+            CSS, JavaScript, and modern frameworks. I craft responsive and
+            interactive websites that deliver value and creativity.
+          </p>
+          <a href="#contact"
+            class="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition">
+            Contact Me
+          </a>
+        </div>
+
+       
+        <div class="relative group w-full max-w-md mx-auto">
+          <img src="https://via.placeholder.com/400x400.png?text=About+Image"
+            alt="About"
+            class="rounded-2xl shadow-xl group-hover:scale-105 transition-transform duration-500 ease-in-out" />
+        </div>
+
+      </div>
+    </section> -->
+
+    <section id="skills" class="py-20 px-6 md:px-12 bg-gray-50 dark:bg-gray-900"
+      data-aos="fade-up">
+      <div class="max-w-6xl mx-auto text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">My
+          Skills</h2>
+        <p class="text-black-600 dark:text-black-300">
+          The toolkit behind my responsive and user-first web development approach.
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+        <!-- Card 1 -->
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center transform hover:-translate-y-2 transition duration-300">
+          <i class="fas fa-code text-4xl text-purple-600 mb-4"></i>
+          <h4
+            class="text-xl font-semibold text-gray-800 dark:text-white">HTML5</h4>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center transform hover:-translate-y-2 transition duration-300">
+          <i class="fab fa-css3-alt text-4xl text-blue-600 mb-4"></i>
+          <h4
+            class="text-xl font-semibold text-gray-800 dark:text-white">CSS3</h4>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center transform hover:-translate-y-2 transition duration-300">
+          <i class="fab fa-js text-4xl text-yellow-400 mb-4"></i>
+          <h4
+            class="text-xl font-semibold text-gray-800 dark:text-white">JavaScript</h4>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center transform hover:-translate-y-2 transition duration-300">
+          <i class="fab fa-react text-4xl text-blue-500 mb-4"></i>
+          <h4
+            class="text-xl font-semibold text-gray-800 dark:text-white">React</h4>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center transform hover:-translate-y-2 transition duration-300">
+          <i class="fab fa-wordpress text-4xl text-blue-700 mb-4"></i>
+          <h4
+            class="text-xl font-semibold text-gray-800 dark:text-white">WordPress</h4>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center transform hover:-translate-y-2 transition duration-300">
+          <i class="fas fa-paint-brush text-4xl text-pink-500 mb-4"></i>
+          <h4 class="text-xl font-semibold text-gray-800 dark:text-white">bootstrap
+            </h4>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 md:px-12 bg-white dark:bg-gray-950"
+      data-aos="fade-up">
+      <div class="max-w-6xl mx-auto text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">My
+          Projects</h2>
+        <p class="text-gray-600 dark:text-gray-300">Some of the awesome work
+          I’ve done recently.</p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+        <!-- Card 1 -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 bg-gray-100 dark:bg-gray-800">
+          <img src="assets/img/p2.jpg"
+            class="w-full h-48 object-cover" alt="Project 1">
+          <div class="p-6">
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-white">Portfolio
+              Website</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Modern personal website built with HTML, CSS & JavaScript.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 bg-gray-100 dark:bg-gray-800">
+          <img src="assets/img/e.jpg"
+            class="w-full h-48 object-cover" alt="Project 2">
+          <div class="p-6">
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-white">E-commerce
+              Store</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Modern WooCommerce shop tailored using Elementor builder.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 bg-gray-100 dark:bg-gray-800">
+          <img src="assets/img/dashboard.jpg"
+            class="w-full h-48 object-cover" alt="Project 3">
+          <div class="p-6">
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-white">React
+              Dashboard</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Built using React and Tailwind with real-time chart widgets.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 bg-gray-100 dark:bg-gray-800">
+          <img src="assets/img/blogs.jpg"
+            class="w-full h-48 object-cover" alt="Project 4">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Blog
+              Template</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Simple blog interface built with Tailwind and Markdown.</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 bg-gray-100 dark:bg-gray-800">
+          <img src="assets/img/landing.jpg"
+            class="w-full h-48 object-cover" alt="Project 5">
+          <div class="p-6">
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-white">Landing
+              Page</h3>
+            <p
+              class="text-gray-600 dark:text-gray-300 text-sm mt-2">Animated product page designed to boost sales.</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 bg-gray-100 dark:bg-gray-800">
+          <img src="assets/img/p3.jpg"
+            class="w-full h-48 object-cover" alt="Project 6">
+          <div class="p-6">
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-white">Portfolio
+              v2</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">GSAP-enhanced portfolio with Tailwind & AOS effects.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact"
+      class="py-20 px-6 md:px-12 bg-gray-50 dark:bg-gray-900"
+      data-aos="fade-up">
+      <div class="max-w-4xl mx-auto text-center mb-10">
+        <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Let's
+          Connect</h2>
+        <p class="text-gray-600 dark:text-gray-300">Need a dev or just want to say hey? Let’s talk.</p>
+      </div>
+
+      <div
+        class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-md p-8">
+        <form class="space-y-6">
+          <div>
+            <label for="name"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+            <input type="text" id="name"
+              class="mt-1 block w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="email"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+            <input type="email" id="email"
+              class="mt-1 block w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="message"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+            <textarea id="message" rows="5"
+              class="mt-1 block w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+          <div class="text-right">
+            <button type="submit"
+              class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Send
+              Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer
+      class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 py-10 mt-10"
+      data-aos="fade-up">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- About -->
+          <div>
+            <h2 class="text-xl font-semibold mb-4">About</h2>
+            <p class="text-sm leading-relaxed">
+              I'm a passionate Frontend Developer and Designer creating modern,
+              clean, and responsive websites.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h2 class="text-xl font-semibold mb-4">Quick Links</h2>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#about"
+                  class="hover:text-indigo-600 dark:hover:text-indigo-400">About</a></li>
+              <li><a href="#skills"
+                  class="hover:text-indigo-600 dark:hover:text-indigo-400">Skills</a></li>
+              <li><a href="#projects"
+                  class="hover:text-indigo-600 dark:hover:text-indigo-400">Projects</a></li>
+              <li><a href="#contact"
+                  class="hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h2 class="text-xl font-semibold mb-4">Follow Me</h2>
+            <div class="flex space-x-4">
+              <a href="#"
+                class="text-xl hover:text-indigo-600 dark:hover:text-indigo-400">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#"
+                class="text-xl hover:text-indigo-600 dark:hover:text-indigo-400">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#"
+                class="text-xl hover:text-indigo-600 dark:hover:text-indigo-400">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#"
+                class="text-xl hover:text-indigo-600 dark:hover:text-indigo-400">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <!-- <div
+          class="text-center text-sm mt-10 border-t border-gray-300 dark:border-gray-700 pt-6">
+          &copy; 2025 Your Name. All rights reserved.
+        </div> -->
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init();
+  </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/j.s/style.js"></script>
+  </body>
+</html>
